@@ -97,10 +97,8 @@ function FieldsGenerator({ fields, errors }) {
                               currentField.name +
                               '.' +
                               _f.name;
-                            _f.name = [currentField.name, _f.name].join('-');
-                            _f.fieldKey = [currentField.fieldKey, _f.name].join(
-                              '-'
-                            );
+                            _f.name = [currentField.name, _f.name];
+                            _f.fieldKey = [currentField.fieldKey, _f.name];
                             return (
                               <FieldsGenerator fields={[_f]} errors={errors} />
                             );
